@@ -139,7 +139,7 @@ class ForeignAttributes implements Attributes {
 	}
 
 	public function key() {
-		$name = parent::key();
+		$name = ""; //parent::key();
 		return isset( $this->table[$name] ) ? $this->table[$name] : $name;
 	}
 
