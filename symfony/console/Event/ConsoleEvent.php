@@ -21,7 +21,7 @@ use Symfony\Component\EventDispatcher\Event;
  *
  * @author Francesco Levorato <git@flevour.net>
  */
-class ConsoleEvent extends Event
+class ConsoleEvent //extends Event
 {
     protected $command;
 

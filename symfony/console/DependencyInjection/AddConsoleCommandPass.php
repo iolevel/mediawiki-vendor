@@ -21,7 +21,7 @@ use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
  *
  * @author Grégoire Pineau <lyrixx@lyrixx.info>
  */
-class AddConsoleCommandPass implements CompilerPassInterface
+class AddConsoleCommandPass //implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
