@@ -83,7 +83,7 @@ class ParserFactory
                 throw new \InvalidArgumentException('Install PHP Parser v2.x to specify parser kind');
             }
 
-            $parser = new Parser(new Lexer());
+            throw new \Exception("Cannot instantiate interface Parser"); //$parser = new Parser(new Lexer());
         }
 
         return $parser;
