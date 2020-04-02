@@ -53,6 +53,12 @@ class ScopedCallback {
 	 * @param ScopedCallback $sc
 	 */
 	public static function consume( ScopedCallback &$sc = null ) {
+		// Peachpie: calling __destruct is currently non-deterministic, we must trigger it manually instead
+		if ( $sc != null && $sc->callback !== null ) {
+			call_user_func_array( $sc->callback, $sc->params );
+			$sc->callback = null;
+		}
+
 		$sc = null;
 	}
 
